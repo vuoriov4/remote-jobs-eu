@@ -4,7 +4,7 @@ from azure.core.paging import ItemPaged
 from operator import itemgetter
 from .secret import connection_string
 
-service = TableServiceClient.from_connection_string(conn_str=connection_string)
+service = TableServiceClient.from_connection_string(conn_str=connection_string())
 table = service.get_table_client(table_name='tags')
 
 def group_tags_by_job_id(tags) -> dict:

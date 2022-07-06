@@ -4,7 +4,7 @@ from azure.core.paging import ItemPaged
 from .tags import get_tag_counts
 from .secret import connection_string
 
-service = TableServiceClient.from_connection_string(conn_str=connection_string)
+service = TableServiceClient.from_connection_string(conn_str=connection_string())
 table = service.get_table_client(table_name='jobs')
 
 def query_jobs(search_term: str, order_by: str, num_results: int, created_since: int) -> list[ItemPaged]:

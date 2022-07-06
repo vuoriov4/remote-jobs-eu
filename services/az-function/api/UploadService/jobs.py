@@ -4,7 +4,7 @@ from azure.data.tables import TableServiceClient
 import datetime
 from .secret import connection_string
 
-service = TableServiceClient.from_connection_string(conn_str=connection_string)
+service = TableServiceClient.from_connection_string(conn_str=connection_string())
 table = service.get_table_client(table_name='jobs')
 
 def job_exists(job: dict) -> bool:

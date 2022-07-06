@@ -4,7 +4,7 @@ from azure.data.tables import TableServiceClient
 from collections import Counter
 from .secret import connection_string
 
-service = TableServiceClient.from_connection_string(conn_str=connection_string)
+service = TableServiceClient.from_connection_string(conn_str=connection_string())
 table = service.get_table_client(table_name='tags')
 
 def create_tags(job_entity: dict) -> list[dict]:
