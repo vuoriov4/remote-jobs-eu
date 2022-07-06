@@ -2,9 +2,9 @@ import uuid
 from azure.data.tables import TableServiceClient, UpdateMode
 import datetime
 from collections import Counter
+from ..secret import connection_string
 
-connection_string = "DefaultEndpointsProtocol=https;AccountName=remotejobseustorage;AccountKey=R62QYH6DVeQYp/QSZufRI91qzg6nU0cQU+F2J+8WxBObJTknZxzyc82w95Mfu03S31JTUUPWi55B+AStEhc+ug==;EndpointSuffix=core.windows.net"
-service = TableServiceClient.from_connection_string(conn_str=connection_string)
+service = TableServiceClient.from_connection_string(conn_str=connection_string())
 tags_table_client = service.get_table_client(table_name='tags')
 jobs_table_client = service.get_table_client(table_name='jobs')
 
