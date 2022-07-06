@@ -1,0 +1,2 @@
+call az storage blob delete-batch --account-name remotejobseustorage --source $web
+call az storage blob upload-batch --destination $web --account-name remotejobseustorage --destination-path . --source ./dist
