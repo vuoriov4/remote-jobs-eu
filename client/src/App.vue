@@ -4,7 +4,7 @@
       <div id="top-title">Find remote {{ dev }} jobs in Europe</div>
       <input autofocus id="search-bar" placeholder="🔎 React, AWS, C++, Azure" v-model="searchTerm"/>
       <img src="loading.gif" id="loading-gif" v-if="loading"/>
-      <a href="/"><img src="github.png" id="github" width="30px"/></a>
+      <a href="https://github.com/vuoriov4/remote-jobs-eu"><img src="github.png" id="github" width="30px"/></a>
     </div>
     <div id="app-content" v-if="response">
       <div id="left">
