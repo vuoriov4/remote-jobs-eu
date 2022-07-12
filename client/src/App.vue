@@ -62,7 +62,7 @@ export default {
       searchTerm: '',
       orderBy: 'relevance',
       numResults: 50,
-      createdSince: parseInt((Date.now() / 1000) - 60 * 60 * 24 * 7),
+      createdSince: parseInt((Date.now() / 1000) - 60 * 60 * 24 * 30),
       abortController: new AbortController(),
     };
   },
